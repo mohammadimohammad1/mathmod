@@ -1,0 +1,34 @@
+model lab6
+
+parameter Real a=0.12;
+parameter Real b=0.002;
+
+Real S(start=12869);
+Real I(start=113);
+Real R(start=31);
+
+equation
+  der(S)=0;
+  der(I)=b*I;
+  der(R)=-b*I;
+
+end lab6;
+
+
+
+
+model lab6
+
+parameter Real a=0.12;
+parameter Real b=0.002;
+
+Real S(start=12869);
+Real I(start=113);
+Real R(start=31);
+
+equation
+  der(S)=-a*S;
+  der(I)=a*S-b*I;
+  der(R)=b*I;
+  
+end lab6;
