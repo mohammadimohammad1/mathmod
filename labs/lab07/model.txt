@@ -1,0 +1,44 @@
+
+model lab07
+
+parameter Real a = 0.385;
+parameter Real b = 0.000025;
+parameter Real N = 1372;
+
+Real n(start=2);
+equation
+  der(n) = (a+b*n) * (N-n);
+
+end lab07;
+
+
+
+
+
+model lab07
+
+parameter Real a = 0.000014;
+parameter Real b = 0.15;
+parameter Real N = 1372;
+
+Real n(start=2);
+equation
+  der(n) = (a+b*n) * (N-n);
+
+end lab07;
+
+
+
+
+model lab07
+
+parameter Real a = 0.16;
+parameter Real b = 0.18;
+parameter Real N = 1372;
+
+Real n(start=2);
+equation
+  der(n) = (a*sin(time)+b*cos(time)*n) * (N-n);
+
+end lab07;
+
